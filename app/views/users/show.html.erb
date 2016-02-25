@@ -1,0 +1,18 @@
+<div> 
+	<h1>Welcome, <%= @user.first_name %></h1>
+	<p> Here are your current job postings.</p>
+	<div>
+		
+		<% @user.jobs.each do |job| %>
+		
+			<h1>Title: <%= job.title%></h1>
+			<h4>Location: <%= job.location %></h4>
+			<p>Description: <%= job.description %></p>
+			<p>Company: <%= @user.business_name %></p>
+			<a href="/jobs/<%=job.id%>">View Job</a>
+
+		<% end %>
+		
+	</div>
+</div>
+

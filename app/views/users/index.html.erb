@@ -1,0 +1,13 @@
+<div>
+<h1>Welcome to Users Index.</h1>
+<h3>There are currently <%= @users.length %> employers looking for candidates like you!</h3>
+
+<%= form_tag("/search", method: "get") do %>
+  <%= label_tag(:q, "Search for:") %>
+  <%= text_field_tag(:q) %>
+  <p>in</p>
+  <%= text_field :location, placeholder: "Location" %>
+  <%= submit_tag("Search") %>
+<% end %>
+
+</div>

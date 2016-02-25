@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Welcome to RadJobs</title>
+  <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+  <!-- Google Fonts -->
+  <link href='http://fonts.googleapis.com/css?family=Slabo+27px' rel='stylesheet' type='text/css'>
+  
+  <!-- Relative css -->
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+<header>
+    <nav>
+      <ul>
+        <li><a href="/">RadJobs</a></li>
+        
+        <% if current_user %>
+          <li><%= link_to "Log Out", sessions_delete_path, method: :delete %></li>
+          <li><%= link_to "Welcome, #{current_user.first_name}!", user_path(current_user) %></li>
+          <li><a href="/jobs/new">Post a Job</a></li>
+        <% else %>
+          <li><a href="/users/new">Employer Sign Up</a></li>
+          <li><a href="/sign_in">Employer Login</a></li> 
+        <% end %> 
+        <li><a href="/jobs/">All Jobs</a></li>
+
+      <ul>
+    </nav>
+  </header>
+  <main>
+	<%= yield %>
+  </main>
+  <footer>
+    &copy; RadJob
+  </footer>
+</body>
+</html>

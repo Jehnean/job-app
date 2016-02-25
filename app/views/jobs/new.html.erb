@@ -1,0 +1,22 @@
+<%= form_for @job do |f| %>
+    <%= f.hidden_field :user_id, :value => current_user.id %>
+    <%= f.hidden_field :business_name, :value => current_user.business_name %>
+  <div>
+    <%= f.text_field :title, placeholder: "Title" %>
+  </div>
+  <div>
+    <%= f.number_field :salary, placeholder: "Salary" %>
+  </div>
+  <div>
+    <%= f.text_field :description, placeholder: "Description" %>
+  </div>
+  <div>
+    <%= f.text_field :location, placeholder: "Location" %>
+  </div>
+  <div>
+    <%= f.text_field :email, placeholder: "Email" %>
+  </div>
+
+   
+  <%= f.submit "Post a Job" %>
+<% end %>

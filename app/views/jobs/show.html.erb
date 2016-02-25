@@ -1,7 +1,5 @@
 <h1><%= @job.title %></h1>
-<!-- <h2><%#= @current_user.business_name %></h2> -->
 <h3><%= @job.location %></h3>
-<!-- How do I get the date in here? -->
 <small>Posted <%= time_ago_in_words(@job.created_at) %> ago</small>
 <p><%= @job.description %></p>
 
@@ -10,10 +8,6 @@
 <p> Is this the job for you? </p>
 <button> <%= @job.email %> </button>
 
+<%= link_to "Edit Job", edit_job_path(@job), :class => "btn" %>
+<%= link_to "Delete Job", @job, method: :delete, :class => "btn" %> 
 <hr>
-
- <% if current_user.id == @job.user_id %>
-     <button><%= link_to "Delete Job", job_path(@job), method: :destroy %></button>
-     <button><%= link_to "Edit Job", job_path(@job) %></button>
-   <ul>
-  <% end %> 

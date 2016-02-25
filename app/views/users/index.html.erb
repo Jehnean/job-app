@@ -2,12 +2,9 @@
 <h1>Welcome to Users Index.</h1>
 <h3>There are currently <%= @users.length %> employers looking for candidates like you!</h3>
 
-<%= form_tag("/search", method: "get") do %>
-  <%= label_tag(:q, "Search for:") %>
-  <%= text_field_tag(:q) %>
-  <p>in</p>
-  <%= text_field :location, placeholder: "Location" %>
-  <%= submit_tag("Search") %>
-<% end %>
+<%= form_tag(jobs_path, :method => "get", id: "search-form") do %>
+  <%= text_field_tag :search, params[:search], placeholder: "Search Jobs" %>
+  <%= submit_tag "Search", :class => "btn btn-warning btn-group"%>
+ <% end %> 
 
 </div>

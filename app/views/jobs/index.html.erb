@@ -1,5 +1,12 @@
 <h1>Job listings!</h1>
 
+<!-- When submit the form, the view rendered will be the index view of our articles resource -->
+<%= form_tag(jobs_path, :method => "get", id: "search-form") do %>
+  <%= text_field_tag :search, params[:search], placeholder: "Search Jobs" %>
+  <!-- In order to have the "search" icon int the button, we need to use plain HTML instead of using a Rails form helper -->
+  <%= submit_tag "Search", :class => "btn btn-warning btn-group"%>
+<% end %> 
+
 <% @jobs.each do |job| %>
   <div>
     <h3><%= job.title %></h3>

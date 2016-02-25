@@ -13,12 +13,10 @@ Rails.application.routes.draw do
   get "sessions/new"
   resources :sessions
 
-
   # get "/jobs", to: "jobs#index"
   # post "/jobs", to: "jobs#create"
-  resources :jobs
+  resources :jobs, only: [:index, :new, :create, :show, :edit, :update, :destroy]
 
   # get "/users/:user_id/jobs", to: "users#index", as: "user_libraries"
-
 
 end

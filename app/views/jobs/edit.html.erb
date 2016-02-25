@@ -1,0 +1,13 @@
+<%= form_for @job do |f| %>
+     <%= f.text_field :title, placeholder: "Title" %>
+
+    <%= f.number_field :salary, placeholder: "Salary" %>
+
+    <%= f.text_field :description, placeholder: "Description" %>
+
+    <%= f.text_field :location, placeholder: "Location" %>
+
+    <%= f.text_field :email, placeholder: "Email" %>
+
+  <%= f.submit "Update Job" %>
+<% end %>

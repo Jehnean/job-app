@@ -4,20 +4,33 @@
 	            <div class="row">
 	                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1 ">
 		                <div class= "image-overlay">
-		                    <div class="site-heading">
-		                    <h1>Welcome to Users Index.</h1>
-<h3>There are currently <%= @users.length %> employers looking for candidates like you!</h3>
-
-<%= form_tag(jobs_path, :method => "get", id: "search-form") do %>
-  <%= text_field_tag :search, params[:search], placeholder: "Search Jobs" %>
-  <%= submit_tag "Search", :class => "btn btn-warning btn-group"%>
- <% end %> 
-	                    	
+		                    <div id="site-heading">
+		                    <h1>What do we want? Jobs!</h1>
+							<h3>There are currently <%= @users.length %> employers on RadJobs looking for candidates like you!</h3>
+							
+							<!-- Form Stuff -->
+							<%= form_tag(jobs_path, :method => "get", id: "search-form") do %>
+							<%= text_field_tag :search, params[:search], placeholder: "Search Jobs" %>
+							<%= submit_tag "Search", :class => "btn btn-warning btn-group"%>
+								<% end %> 
+								<!-- End Form Stuff -->
 		                	</div>
 		                </div>
                 	</div>
 	            </div>
 	        </div>
+	        <div> 
 	    </header>
+
+	    <div class="row">
+	    	<div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1 ">
+		    	<div class="page-content">
+			      	<h4>Here's the Deal</h4>
+			        <p> I wanted to build a super cool job finding app. All the stuff works, so feel free to Sign Up as an employer and make a job, or look though the jobs people have posted. That being said, I had some bugs, lost some steam, and spent a bit too much time helping others, so the style is lacking. Feel free to let me know if you find any bugs or would like to see any edits. Thanks!</p>
+			    </div>
+	    	</div>
+	    </div>
+
+
 
 

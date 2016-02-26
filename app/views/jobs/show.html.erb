@@ -1,15 +1,17 @@
-<h1><%= @job.title %></h1>
-<h3><%= @job.location %></h3>
-<small>Posted <%= time_ago_in_words(@job.created_at) %> ago</small>
-<p><%= @job.description %></p>
-
-
-
-<p> Is this the job for you? </p>
-<button> <%= @job.email %> </button>
-
-<% if current_user %>
-	<%= link_to "Edit Job", edit_job_path(@job), :class => "btn" %>
-	<%= link_to "Delete Job", @job, method: :delete, :class => "btn" %> 
-<% end %> 
-<hr>
+<div class="col-md-12">
+	<div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+		<div class="page-content">
+			<h1><%= @job.title %></h1>
+			<h3><%= @job.location %></h3>
+			<small>Posted <%= time_ago_in_words(@job.created_at) %> ago</small>
+			<p><%= @job.description %></p>
+			<p> Is this the job for you? </p>
+			<button class= "btn btn-warning btn-group"> <%= @job.email %> </button>
+			<% if current_user %>
+				<%= link_to "Edit Job", edit_job_path(@job), :class => "btn clean-btn btn-group" %>
+				<%= link_to "Delete Job", @job, method: :delete, :class => "btn clean-btn btn-group" %> 
+			<% end %> 
+			
+		</div>
+	</div>
+</div>

@@ -1,21 +1,31 @@
-<h1>Job listings!</h1>
+<div class="col-md-12">
+    <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+    <div class="page-content">
+        <h1>Job listings from cool people!</h1>
+   
+      
+        <!-- When submit the form, the view rendered will be the index view of our articles resource -->
+        <%= form_tag(jobs_path, :method => "get", id: "search-form") do %>
+        <%= text_field_tag :search, params[:search], placeholder: "Search Jobs" %>
+        <!-- In order to have the "search" icon int the button, we need to use plain HTML instead of using a Rails form helper -->
+        <%= submit_tag "Search", :class => "btn btn-warning btn-group"%>
+      <% end %> 
 
-<!-- When submit the form, the view rendered will be the index view of our articles resource -->
-<%= form_tag(jobs_path, :method => "get", id: "search-form") do %>
-  <%= text_field_tag :search, params[:search], placeholder: "Search Jobs" %>
-  <!-- In order to have the "search" icon int the button, we need to use plain HTML instead of using a Rails form helper -->
-  <%= submit_tag "Search", :class => "btn btn-warning btn-group"%>
-<% end %> 
+      <hr>
 
-<% @jobs.each do |job| %>
-  <div>
-    <h3><%= job.title %></h3>
-    <h4><%= job.location %></h4>
-    <h5><%= job.business_name %></h5> 
-    <p><%= job.description %></p>
-  	<a href="/jobs/<%= job.id %>">View Job</a>
-
-    <!-- How do I get the post date in here? -->
-  </div>
-  <br>
-<% end %>
+      <ul>
+      <% @jobs.each do |job| %>
+            <li>
+              <h3><%= job.title %></h3>
+              <h4><%= job.location %></h4>
+              <h5><%= job.business_name %></h5> 
+              <small>Posted <%= time_ago_in_words(job.created_at) %> ago</small>
+              <p><%= job.description %></p>
+          
+            	<a href="/jobs/<%= job.id %>">View Job</a>
+            </li>
+            <hr> 
+        <% end %> 
+      </ul>
+    </div>
+</div>

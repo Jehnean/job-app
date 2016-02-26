@@ -8,6 +8,8 @@
 <p> Is this the job for you? </p>
 <button> <%= @job.email %> </button>
 
-<%= link_to "Edit Job", edit_job_path(@job), :class => "btn" %>
-<%= link_to "Delete Job", @job, method: :delete, :class => "btn" %> 
+<% if current_user %>
+	<%= link_to "Edit Job", edit_job_path(@job), :class => "btn" %>
+	<%= link_to "Delete Job", @job, method: :delete, :class => "btn" %> 
+<% end %> 
 <hr>

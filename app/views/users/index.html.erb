@@ -1,10 +1,23 @@
-<div>
-<h1>Welcome to Users Index.</h1>
+<!-- Page Header -->
+	    <header class="intro-header">
+	        <div class="container">
+	            <div class="row">
+	                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1 ">
+		                <div class= "image-overlay">
+		                    <div class="site-heading">
+		                    <h1>Welcome to Users Index.</h1>
 <h3>There are currently <%= @users.length %> employers looking for candidates like you!</h3>
 
 <%= form_tag(jobs_path, :method => "get", id: "search-form") do %>
   <%= text_field_tag :search, params[:search], placeholder: "Search Jobs" %>
   <%= submit_tag "Search", :class => "btn btn-warning btn-group"%>
  <% end %> 
+	                    	
+		                	</div>
+		                </div>
+                	</div>
+	            </div>
+	        </div>
+	    </header>
 
-</div>
+

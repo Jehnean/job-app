@@ -16,135 +16,72 @@
 
 
 body {
-  font-family: 'Slabo 27px', serif;
+  font-family: 'Muli', sans-serif;
+  font-weight: 300; 
+  background: #e1e3e4;
+  color: #404040;
+  /* Needed for Nav Bar */
+  padding-top: 50px;
+}
+
+header nav {
+  outline: 1px solid #ccc;
+}
+
+p {
   line-height: 1.5;
-  background: #f1f4f6;
+  margin: 30px 0;
 }
-
-h1,h2,h3,h4,h5,h6 {
-  margin: 0 0 20px;
-}
-
-h1, h2 {
-  font-size: 30px;
-}
-
-a {
-  color: #000;
-}
-
-header {
-  width: 100%;
-  background: black;
-}
-
-header nav { 
-  max-width: 960px;
-  margin: 0 auto;
-  height: 60px;
-  line-height: 60px;
-}
-
-header nav ul {
-  height: 60px;
-  line-height: 60px;
-}
-
-header nav ul li:first-child {
-  float: left;
-  padding: 0;
-  font-size: 35px;
-}
-
-header nav ul li {
-  display: inline;
-  list-style-type: none;
-  height: 60px;
-  line-height: 60px;
-  float: right;
-  padding: 0 10px;
-  color: white;
-}
-
-header nav ul li a {
-  color: white;
-  text-decoration: none;
-}
-
-main, footer {
-  max-width: 960px;
-  margin: 40px auto;
-}
-
-main .jobs {
-  margin: 20px 0;
-}
-
-main ul {
-  list-style-type: none;
-  padding: 0;
-}
-
-.jobs .row {
-  height: 100px;
-}
-
-
-.jobs .row, 
-.jobs .row {
-  clear: both;
-  background: #fff;
-  padding: 10px;
-  margin: 0 0 10px;
-}
-
-.jobs .row img {
-  float: left;
-  max-height: 100px;
-}
-
-.jobs .row ul {
-  float: left;
-  margin: 0 0 0 10px;
-}
-
-.jobs .row h2, 
-.jobs .row h2 a {
-  font-size: 20px;
-  margin: 0 0 10px;
-  text-decoration: none;
-}
-
-.jobs .row ul li a,
-.jobs .row ul li button {
-.jobs .row ul li a,
-.jobs .row ul li button {
-  color: black;
-  background:none
-  border:none; 
-  padding:0
-  font: inherit;
+p a {
   text-decoration: underline;
-  cursor: pointer;
+}
+a {
+  color: #404040;
 }
 
-input, select {
-  display: block;
-  line-height: 2;
-  width: 300px;
-  margin: 0 0 10px;
+h1 {
+  font-family: 'Ovo', serif;
 }
 
-input[type=submit], 
+h2, h3 {
+	font-weight: 100; 
+}
+
+.intro-header {
+	text-shadow: none;
+	color: #fff; 
+	background: no-repeat center center;
+	background-image: linear-gradient(rgba(0,0,0, .4), rgba(0,0,0,.4)) ,url('https://images.unsplash.com/photo-1416339442236-8ceb164046f8?crop=entropy&dpr=2&fit=crop&fm=jpg&h=750&ixjsv=2.1.0&ixlib=rb-0.3.5&q=50&w=950'); 
+  	background-attachment: scroll;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	background-size: cover;
+	-o-background-size: cover;
+	margin-bottom: 50px;
+	display: block; 
+	min-height: 500px; 
+}
+
 .btn {
-  background: #d8e1e5;
-  border: none;
-  padding: 10px;
+  font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   text-transform: uppercase;
-  font-weight: 700;
-  width: 305px;
-  color: #535454;
-  text-decoration: none;
-  display: block;
-  margin-bottom: 20px;
-} 
+  font-size: 14px;
+  font-weight: 800;
+  letter-spacing: 1px;
+  border-radius: 0;
+  padding: 16px 25px;
+  margin-left: 2%; 
+  color: #333;
+  background-color: #f7f7f7;
+  border-color: #ccc;
+  width: 16%;
+}
+.btn:hover,
+.btn:focus {
+  background-color: #0085a1;
+  border: 1px solid #0085a1;
+  color: white;
+  color: #fff;
+  text-shadow: none;
+  background: #0085a1;
+}

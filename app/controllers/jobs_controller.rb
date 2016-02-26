@@ -47,7 +47,7 @@ class JobsController < ApplicationController
     id = params[:id]
     job = Job.find(id)
     job.destroy
-    redirect_to jobs_path
+    redirect_to user_path(current_user)
   end
 
 

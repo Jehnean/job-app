@@ -1,41 +1,82 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <title>Welcome to RadJobs</title>
-  <!-- Latest compiled and minified CSS -->
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
-  <!-- Google Fonts -->
-  <link href='http://fonts.googleapis.com/css?family=Slabo+27px' rel='stylesheet' type='text/css'>
-  
-  <!-- Relative css -->
-  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
-  <%= csrf_meta_tags %>
-</head>
-<body>
-<header>
-    <nav>
-      <ul>
-        <li><a href="/">RadJobs</a></li>
-        
-        <% if current_user %>
-          <li><%= link_to "Log Out", sessions_delete_path, method: :delete %></li>
-          <li><%= link_to "Welcome, #{current_user.first_name}!", user_path(current_user) %></li>
-          <li><a href="/jobs/new">Post a Job</a></li>
-        <% else %>
-          <li><a href="/users/new">Employer Sign Up</a></li>
-          <li><a href="/sign_in">Employer Login</a></li> 
-        <% end %> 
-        <li><a href="/jobs/">All Jobs</a></li>
+  <head>
 
-      <ul>
-    </nav>
-  </header>
-  <main>
-	<%= yield %>
-  </main>
-  <footer>
-    &copy; RadJob
-  </footer>
-</body>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>Welcome to RadJobs</title>
+
+    <!-- Latest Bootstrap compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+    
+    <!-- Custom Fonts -->
+    <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="http://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css">
+    <link href="http://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+
+    <!-- Custom CSS -->
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+    <%= csrf_meta_tags %>
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+  </head>
+  <body>
+    <!-- Navigation Area -->
+    <header>
+      <nav class="navbar navbar-default navbar-fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="/">RadJobs</a>
+            <button class = 'navbar-toggle' data-toggle = 'collapse' data-target= '.navHeaderCollapse'>
+                    <span class = 'icon-bar'></span>
+                    <span class = 'icon-bar'></span>
+                    <span class = 'icon-bar'></span>
+                </button>
+              <div class="collapse navbar-collapse navHeaderCollapse">
+                    <ul class="nav navbar-nav navbar-right">
+                        <li><a href="/jobs/">All Jobs</a></li>
+                        <% if current_user %>
+                          <li><%= link_to "Welcome, #{current_user.first_name}!", user_path(current_user) %></li>
+
+                          <li><a href="/jobs/new">Post a Job</a></li>
+                          <li><%= link_to "Log Out", sessions_delete_path, method: :delete %></li>
+                        <% else %>
+                          <li><a href="/users/new">Employer Sign Up</a></li>
+                          <li><a href="/sign_in">Employer Login</a></li> 
+                        <% end %> 
+                    </ul>
+            </div>
+          </div>
+        </nav>
+    </header>
+    <!-- End Header -->
+
+    <!-- Container for current page content -->
+
+    <div class="container-fluid">
+      <div class="row">
+  	   <%= yield %>
+       </div>
+    </div>
+
+    <!-- End current page content -->
+
+    <!-- Footer -->
+    <footer>
+      &copy; RadJob
+    </footer>
+    <!-- End Footer -->
+    <!-- Javascript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+    <!-- End JavaScript -->
+  </body>
 </html>

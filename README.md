@@ -32,12 +32,14 @@ HTML5  CSS3  Ruby on Rails   Heroku
 Still looking for a better search feature. Later on, I would like to add an on map feature for jobs. Check out the icebox list here:
 <a href="https://trello.com/b/HQ5xvl5c/ga-project-2" target="_blank">Job App Trello Planning</a>
 
-
-
 ## Planning Stage
 
 User stories and to do lists all on Trello here: <a href="https://trello.com/b/HQ5xvl5c/ga-project-2" target="_blank">Job App Trello Planning</a>
-Wireframes upon request. 
+
+Wireframes located here: 
+<a href="http://6hnxzy.axshare.com" target="_blank">Job App Wireframes</a>
+
+
 
 
 

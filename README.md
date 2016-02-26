@@ -1,6 +1,6 @@
 # RadJobs Job Finder Web App 
 
-## https://boiling-everglades-81865.herokuapp.com/
+### <a href="https://boiling-everglades-81865.herokuapp.com/" target="_blank">Project on Heroku</a>
 
 ## Description
 
@@ -29,12 +29,14 @@ HTML5  CSS3  Ruby on Rails   Heroku
 
 ## How to Contribute
 
-Still looking for a better search feature. Later on, I would like to add an on map feature for jobs. Check out the icebox list here: https://trello.com/b/HQ5xvl5c/ga-project-2
+Still looking for a better search feature. Later on, I would like to add an on map feature for jobs. Check out the icebox list here:
+<a href="https://trello.com/b/HQ5xvl5c/ga-project-2" target="_blank">Job App Trello Planning</a>
+
 
 
 ## Planning Stage
 
-User stories and to do lists all on Trello here: https://trello.com/b/HQ5xvl5c/ga-project-2
+User stories and to do lists all on Trello here: <a href="https://trello.com/b/HQ5xvl5c/ga-project-2" target="_blank">Job App Trello Planning</a>
 Wireframes upon request. 
 
 
